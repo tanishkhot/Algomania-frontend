@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Navbar = () => {
   return (
   
-      <div className="flex bg-black items-center px-5 justify-between w-full h-16">
+      <div className="flex items-center px-5 justify-between w-full h-16">
       <h1 className="text-white text-2xl font-bold">AlgoMania</h1>
       <div className="flex items-center space-x-4">
         <Link href="/">
