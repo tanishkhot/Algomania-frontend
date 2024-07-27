@@ -29,7 +29,7 @@ export default function Home() {
                 <IndInfoCard/>
               </div>      
             </div>
-            <div className="flex w-full justify-between">
+            <div className="flex w-full  justify-between">
               <div className="w-full">
                 <IndInfoCard/>
               </div>      
