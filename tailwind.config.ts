@@ -12,12 +12,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        inika:  ['"Inika"','serif'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },animation: {
+      },
+      animation: {
         aurora: "aurora 60s linear infinite",
+      },
+      backdropBlur: {
+        xs: '2px',
+        sm: '4px',
+        DEFAULT: '8px',
+        md: '12px',
+        lg: '16px',
+        xl: '24px',
       },
       keyframes: {
         aurora: {
@@ -31,7 +43,23 @@ const config: Config = {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [
+    addVariablesForColors,
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.no-scroll': {
+          /* Hide scrollbar for Chrome, Safari and Opera */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          /* Hide scrollbar for IE, Edge and Firefox */
+          '-ms-overflow-style': 'none',  /* IE and Edge */
+          'scrollbar-width': 'none',  /* Firefox */
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {
@@ -39,9 +67,10 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
 }
+
 export default config;
