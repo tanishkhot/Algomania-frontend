@@ -14,7 +14,13 @@ const Navbar = () => {
         <Link href="/">
           <h1 className="text-white text-xl">Home</h1>
         </Link>
-        <Link href="/login">
+        <Link href="/user">
+          <h1 className="text-white text-xl">User</h1>
+        </Link>
+        <Link href="/team">
+          <h1 className="text-white text-xl">Team</h1>
+        </Link>
+        <Link href="/signup">
           <h1 className='text-white text-xl'>Sign In</h1>
         </Link>
         <Link href="/dashboard">
