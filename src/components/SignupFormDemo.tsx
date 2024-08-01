@@ -36,6 +36,10 @@ export function SignupFormDemo() {
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
+          <Label htmlFor="leetcodeid">Leetcode Id</Label>
+          <Input id="leetcodeid" placeholder="Duren-123" type="text" />
+        </LabelInputContainer>
+        <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
         </LabelInputContainer>

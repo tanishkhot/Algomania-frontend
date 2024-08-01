@@ -8,7 +8,7 @@ import GrpInfoCard from "@/components/GrpInfoCard";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
-      <h1 className="text-white text-9xl">Algomania</h1>
+      <h1 className="text-white text-9xl">AlgoMania</h1>
       <h1 className="text-white text-4xl mt-8">Unleasing the Algorithmic Frenzy</h1>
     </div>
   );

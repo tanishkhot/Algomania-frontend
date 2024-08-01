@@ -6,7 +6,7 @@ import Rankbox from './Rankbox';
 const Ranklist = () => {
   const [activeTab, setActiveTab] = useState('individual');
 
-  const handleTabClick = (tab) => {
+  const handleTabClick = (tab:any) => {
     setActiveTab(tab);
   };
 
@@ -22,28 +22,7 @@ const Ranklist = () => {
     {name: 'Shlok gaidhani',points: 0, rank: '#9'},
     {name: 'Kanak Agarwal',points: 0, rank: '#10'},
   ];
-// We support GFG	623
-// Shishimaru	579
-// LeetHunters	525
-// SIGSEGV	495
-// Code Crushers	399
-// AlgoRiders	349
-// Code Executors	306
-// Proxy	304
-// Whoami	263
-// Hustlers	248
-// Leet Legends	131
-// Tech Titans	131
-// AlgorithmAviator	102
-// ZerotoHero	93
-// Test Cases Passed	91
-// Chhichhore coders	78
-// meatHeads	76
-// Binary Bosses	67
-// Titanic	39
-// Algorithm Avengers	0
-// CodeRangers	0
-// Leet_Comer	0
+
   const groupRank = [
     {name: 'We Support GFG',points : 623,rank: '#1'},
     {name: 'Shishimaru',points : 579,rank: '#2'},
@@ -123,26 +102,3 @@ const Ranklist = () => {
 };
 
 export default Ranklist;
-
-// We support GFG	623
-// Shishimaru	579
-// LeetHunters	525
-// SIGSEGV	495
-// Code Crushers	399
-// AlgoRiders	349
-// Code Executors	306
-// Proxy	304
-// Whoami	263
-// Hustlers	248
-// Leet Legends	131
-// Tech Titans	131
-// AlgorithmAviator	102
-// ZerotoHero	93
-// Test Cases Passed	91
-// Chhichhore coders	78
-// meatHeads	76
-// Binary Bosses	67
-// Titanic	39
-// Algorithm Avengers	0
-// CodeRangers	0
-// Leet_Comer	0

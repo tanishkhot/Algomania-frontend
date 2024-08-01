@@ -2,6 +2,7 @@ import React from 'react'
 import Ranklist from '@/components/Ranklist'
 import IndInfoCard from '@/components/IndInfoCard'
 import GrpInfoCard from '@/components/GrpInfoCard'
+import QuestionsBox from '@/components/QuestionsBox'
 
 export default function dashboard () {
   return (
@@ -29,7 +30,7 @@ export default function dashboard () {
             </div>
             <div className="flex w-full  justify-between">
               <div className="w-full">
-                <IndInfoCard/>
+                <QuestionsBox/>
               </div>      
             </div>
           </div>  
