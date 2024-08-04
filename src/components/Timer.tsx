@@ -44,21 +44,24 @@ export default function Timer() {
         <div className='text-white flex flex-col items-center justify-center'>
           <h1 className='text-1xl font-bold'>Countdown to Event</h1>
           <div className='flex justify-center mt-4'>
-            <div className='mx-3'>
+            <div className='mx-3 flex flex-col item-center justify-center'>
               <div className=' text-7xl'>{days}</div>
               <div className='text-sm'>Days</div>
             </div>
-            <div className='mx-3'>
+            <div className='text-7xl'>:</div>
+            <div className='mx-3 flex flex-col item-center justify-center'>
               <div className='text-7xl'>{hours}</div>
-              <div className='text-sm'>Hours</div>
+              <div className='text-sm flex justify-center'>Hours</div>
             </div>
+            <div className='text-7xl'>:</div>
             <div className='mx-3'>
               <div className='text-7xl'>{minutes}</div>
-              <div className='text-sm'>Minutes</div>
+              <div className='text-sm flex justify-center'>Minutes</div>
             </div>
+            <div className='text-7xl'>:</div>
             <div className='mx-3'>
               <div className='text-7xl'>{seconds}</div>
-              <div className='text-sm'>Seconds</div>
+              <div className='text-sm flex justify-center'>Seconds</div>
             </div>
           </div>
         </div>

@@ -63,14 +63,14 @@ const QuestionChart: React.FC<QuestionChartProps> = ({ easy, medium, hard, potd,
               data: [easy, medium, hard, potd, staff, weekly, biweekly],
               backgroundColor: ['grey', 'grey', 'grey', 'grey', 'grey', 'grey', 'grey'],
               hoverBackgroundColor: ['grey', 'grey', 'grey', 'grey', 'grey', 'grey', 'grey'],
-              borderWidth: 1,
+              borderWidth: 1 ,
               circumference: 180,
               rotation: 270,
             },
           ],
         },
         options: {
-          cutout: '60%', // Adjust cutout size for a more compact look
+          cutout: '85%', // Adjust cutout size for a more compact look
           responsive: true,
           maintainAspectRatio: false,
           plugins: {

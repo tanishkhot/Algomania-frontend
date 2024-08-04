@@ -17,6 +17,9 @@ const Navbar = () => {
         <Link href="/team">
           <h1 className="text-white text-xl">Team</h1>
         </Link>
+        <Link href="/admin">
+          <h1 className="text-white text-xl">Admin</h1>
+        </Link>
         <Link href="/signup">
           <h1 className='text-white text-xl'>Sign In</h1>
         </Link>

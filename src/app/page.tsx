@@ -1,6 +1,5 @@
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
-import Trial from "@/components/Trial";
 import IndInfoCard from "@/components/IndInfoCard";
 import Ranklist from "@/components/Ranklist";
 import GrpInfoCard from "@/components/GrpInfoCard";

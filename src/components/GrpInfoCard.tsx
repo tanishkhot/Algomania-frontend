@@ -10,9 +10,9 @@ const GrpInfoCard = () => {
         </div>
         <h1 className='text-2xl'>#9</h1>
       </div>
-      <div>
+      {/* <div>
         <h1 className='text-white text-2xl'> Members </h1>
-      </div>
+      </div> */}
       <div className='text-white'>
         <ul className='h-20 overflow-y-auto no-scroll'>
             <li>Devashish Bhirdi (150)</li>
