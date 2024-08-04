@@ -5,7 +5,7 @@ import Rankbox from './Rankbox';
 
 const Ranklist = () => {
   const [activeTab, setActiveTab] = useState('individual');
-
+  
   const handleTabClick = (tab:any) => {
     setActiveTab(tab);
   };

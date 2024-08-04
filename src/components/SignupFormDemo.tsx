@@ -1,5 +1,7 @@
 "use client";
+const axios = require("axios");
 import React from "react";
+import { useState } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { cn } from "../../lib/utils";
@@ -11,9 +13,26 @@ import {
 import Link from "next/link";
 
 export function SignupFormDemo() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    leetcodeId: '',
+    email: '',
+    password: '',
+  });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const {id , value} = e.target;
+    setFormData({...formData, [id]:value});
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    console.log("Form submitted", formData);
+    try {
+      const response = await axios.post("https://algomania-backend.onrender.com/api/register/", formData);
+      console.log("Response:", response.data);
+    }catch(e){
+      console.error("Error:", e);
+    }
   };
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-gray-700/30 backdrop-blur-xl border border-gray-100/20">
@@ -26,26 +45,26 @@ export function SignupFormDemo() {
 
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
+          {/* <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
             <Input id="firstname" placeholder="Tyler" type="text" />
-          </LabelInputContainer>
+          </LabelInputContainer> */}
           <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Label htmlFor="name">Name</Label>
+            <Input id="name" placeholder="Durden" type="text" value={formData.name} onChange={handleChange}/>
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="leetcodeid">Leetcode Id</Label>
-          <Input id="leetcodeid" placeholder="Duren-123" type="text" />
+          <Label htmlFor="leetcodeId">Leetcode Id</Label>
+          <Input id="leetcodeId" placeholder="Duren-123" type="text" value={formData.leetcodeId}onChange={handleChange}/>
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input id="email" placeholder="projectmayhem@fc.com" type="email" value={formData.email} onChange={handleChange}/>
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="password">Password</Label>
-          <Input id="password" placeholder="••••••••" type="password" />
+          <Input id="password" placeholder="••••••••" type="password" value={formData.password} onChange={handleChange}/>
         </LabelInputContainer>
 
         <button
