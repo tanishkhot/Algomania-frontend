@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "./ui/aurora-background";
 import Navbar from "./Navbar";
-import Trial from "./Trial";
+import Profile from "./Profile";
 
 export function AuroraBackgroundDemo({children}) {
   return (
